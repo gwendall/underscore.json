@@ -25,7 +25,7 @@ _.json.set(json, "some.nested", "thing")
 
 **remove** - remove(json, selector)
 
-Remove a value in a json
+Removes a value in a json
 
 ```javascript
 var json = {some:{nested:"value"}}
@@ -80,7 +80,7 @@ _.json.unflatten(json)
 
 **is** - is(data)
 
-Check if a variable is a valid json
+Checks if a variable is a valid json
 
 ```javascript
 _.json.is("bonjour")
@@ -95,7 +95,7 @@ _.json.is(json)
 
 **isStringified** - isStringified(string)
 
-Check if a string is a stringified json
+Checks if a string is a stringified json
 
 ```javascript
 _.json.isStringified("bonjour")
