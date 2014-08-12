@@ -2,7 +2,7 @@ JSON manipulation methods for Underscore.js
 
 **get** - get(json, selector)
 
-Gets a value in a json
+<sub>Gets a value in a json</sub>
 
 ```javascript
 var json = {some:{nested:"value"}}
