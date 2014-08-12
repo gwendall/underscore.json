@@ -72,7 +72,7 @@ _.json.flatten(json)
 Builds a json from a dictionnary of dot-separated keys / values
 
 ```javascript
-var json = {some.nested:"value"}
+var json = {"some.nested":"value"}
 _.json.unflatten(json)
 => {some:{nested:"value"}}
 ```
