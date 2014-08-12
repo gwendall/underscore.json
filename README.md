@@ -3,49 +3,60 @@ JSON manipulation methods for Underscore.js
 **get** - get(json, selector)
 
 ```javascript
-_.json.get({some:{nested:"value"}}, "some.nested")
+var json = {some:{nested:"value"}}
+_.json.get(json, "some.nested")
 => "value"
 ```
 
 **set** - set(json, selector, value)
 
 ```javascript
-_.json.set({some:{nested:"value"}}, "some.nested", "thing")
+var json = {some:{nested:"value"}}
+_.json.set(json, "some.nested", "thing")
+json
 => {some:{nested:"thing"}}
 ```
 
 **remove** - remove(json, selector)
 
 ```javascript
-_.json.remove({some:{nested:"value"}}, "some.nested")
+var json = {some:{nested:"value"}}
+_.json.remove(json, "some.nested")
+json
 => {some:null}
 ```
 
 **push** - push(json, selector, value)
 
 ```javascript
-_.json.push({some:{array:[1,2,3]}}, "some.array", "hello")
+var json = {some:{array:[1,2,3]}}
+_.json.push(json, "some.array", "hello")
+json
 => {some:{array:[1,2,3,"hello"]}}
 ```
 
 **unshift** - unshift(json, selector, value)
 
 ```javascript
-_.json.unshift({some:{array:[1,2,3]}}, "some.array", "hello")
+var json = {some:{array:[1,2,3]}}
+_.json.unshift(json, "some.array", "hello")
+json
 => {some:{array:["hello",1,2,3]}}
 ```
 
 **flatten** - flatten(json)
 
 ```javascript
-_.json.flatten({some:{nested:"value"}})
+var json = {some:{nested:"value"}}
+_.json.flatten(json)
 => {some.nested:"value"}
 ```
 
 **unflatten** - unflatten(data)
 
 ```javascript
-_.json.unflatten({some.nested:"value"})
+var json = {some.nested:"value"}
+_.json.unflatten(json)
 => {some:{nested:"value"}}
 ```
 
@@ -54,7 +65,9 @@ _.json.unflatten({some.nested:"value"})
 ```javascript
 _.json.is("bonjour")
 => false
-_.json.is({some:{nested:"value"}})
+
+var json = {some:{nested:"value"}}
+_.json.is(json)
 => true
 
 ```
@@ -64,7 +77,9 @@ _.json.is({some:{nested:"value"}})
 ```javascript
 _.json.isStringified("bonjour")
 => true
-var stringified = JSON.stringify({some:{nested:"value"}});
+
+var json = {some:{nested:"value"}}
+var stringified = JSON.stringify(json);
 _.json.isStringified(stringified)
 => true
 ```
