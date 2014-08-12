@@ -1,19 +1,19 @@
 JSON manipulation methods for Underscore.js
 
-**get([json], [selector])**
+**get** get(json, selector)
 
-**set([json], [selector], [value])**
+**set** set(json, selector, value)
 
-**remove([json], [selector])**
+**remove** remove(json, selector)
 
-**push([json], [selector], [value])**
+**push** push(json, selector, value)
 
-**unshift([json], [selector], [value])**
+**unshift** unshift(json, selector, value)
 
-**flatten([json])**
+**flatten** flatten(json)
 
-**unflatten([data])**
+**unflatten** unflatten(data)
 
-**is([json])**
+**is** is(data)
 
-**isStringified([json])**
+**isStringified** isStringified(string)
