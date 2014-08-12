@@ -98,7 +98,7 @@ Checks if a string is a stringified json
 
 ```javascript
 _.json.isStringified("bonjour")
-=> true
+=> false
 
 var json = {some:{nested:"value"}}
 var stringified = JSON.stringify(json)
