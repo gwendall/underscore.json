@@ -126,8 +126,7 @@
 		var array = _json.get(json, selector);
 		if (!_.isArray(array)) return _json.exit("push", "noArray", "array", array);
 		array.push(value);
-		_json.set(json, selector, array);
-		return;
+		return _json.set(json, selector, array);
 
 	}
 
@@ -139,8 +138,7 @@
 		var array = _json.get(json, selector);
 		if (!_.isArray(array)) return _json.exit("unshift", "noArray", "array", array);
 		array.unshift(value);
-		_json.set(json, selector, array);
-		return;
+		return _json.set(json, selector, array);
 
 	}
 	
