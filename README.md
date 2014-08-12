@@ -1,5 +1,6 @@
 JSON manipulation methods for Underscore.js
 
+
 **get** - get(json, selector)
 
 Gets a value in a json
@@ -9,6 +10,7 @@ var json = {some:{nested:"value"}}
 _.json.get(json, "some.nested")
 => "value"
 ```
+
 
 **set** - set(json, selector, value)
 
@@ -20,15 +22,17 @@ _.json.set(json, "some.nested", "thing")
 => {some:{nested:"thing"}}
 ```
 
+
 **remove** - remove(json, selector)
 
-Remove a value in a json
+Removes a value in a json
 
 ```javascript
 var json = {some:{nested:"value"}}
 _.json.remove(json, "some.nested")
 => {some:null}
 ```
+
 
 **push** - push(json, selector, value)
 
@@ -40,6 +44,7 @@ _.json.push(json, "some.array", "hello")
 => {some:{array:[1,2,3,"hello"]}}
 ```
 
+
 **unshift** - unshift(json, selector, value)
 
 Inserts a value at the beginning of an array in a json
@@ -49,6 +54,7 @@ var json = {some:{array:[1,2,3]}}
 _.json.unshift(json, "some.array", "hello")
 => {some:{array:["hello",1,2,3]}}
 ```
+
 
 **flatten** - flatten(json)
 
@@ -60,6 +66,7 @@ _.json.flatten(json)
 => {some.nested:"value"}
 ```
 
+
 **unflatten** - unflatten(data)
 
 Builds a json from a dictionnary of dot-separated keys / values
@@ -70,9 +77,10 @@ _.json.unflatten(json)
 => {some:{nested:"value"}}
 ```
 
+
 **is** - is(data)
 
-Check if a variable is a valid json
+Checks if a variable is a valid json
 
 ```javascript
 _.json.is("bonjour")
@@ -84,9 +92,10 @@ _.json.is(json)
 
 ```
 
+
 **isStringified** - isStringified(string)
 
-Check if a string is a stringified json
+Checks if a string is a stringified json
 
 ```javascript
 _.json.isStringified("bonjour")
