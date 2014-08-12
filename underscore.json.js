@@ -50,9 +50,12 @@
 	var _json = {}
 
 	_json.VERSION = '0.1.0';
+	_json.debug = true;
 	
 	_json.exit = function(source, reason, data, value) {
-
+		
+		if (!_json.debug) return;
+		
 		var messages = {};
 		messages.noJSON = "Not a JSON";
 		messages.noString = "Not a String";
