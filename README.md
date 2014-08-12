@@ -1,19 +1,70 @@
 JSON manipulation methods for Underscore.js
 
-- get([json], [selector])
+**get** - get(json, selector)
 
-- set([json], [selector], [value])
+```javascript
+_.json.get({some:{nested:"value"}}, "some.nested")
+=> "value"
+```
 
-- remove([json], [selector])
+**set** - set(json, selector, value)
 
-- push([json], [selector], [value])
+```javascript
+_.json.set({some:{nested:"value"}}, "some.nested", "thing")
+=> {some:{nested:"thing"}}
+```
 
-- unshift([json], [selector], [value])
+**remove** - remove(json, selector)
 
-- flatten([json])
+```javascript
+_.json.remove({some:{nested:"value"}}, "some.nested")
+=> {some:null}
+```
 
-- unflatten([data])
+**push** - push(json, selector, value)
 
-- is([json])
+```javascript
+_.json.push({some:{array:[1,2,3]}}, "some.array", "hello")
+=> {some:{array:[1,2,3,"hello"]}}
+```
 
-- isStringified([json])
+**unshift** - unshift(json, selector, value)
+
+```javascript
+_.json.unshift({some:{array:[1,2,3]}}, "some.array", "hello")
+=> {some:{array:["hello",1,2,3]}}
+```
+
+**flatten** - flatten(json)
+
+```javascript
+_.json.flatten({some:{nested:"value"}})
+=> {some.nested:"value"}
+```
+
+**unflatten** - unflatten(data)
+
+```javascript
+_.json.unflatten({some.nested:"value"})
+=> {some:{nested:"value"}}
+```
+
+**is** - is(data)
+
+```javascript
+_.json.is("bonjour")
+=> false
+_.json.is({some:{nested:"value"}})
+=> true
+
+```
+
+**isStringified** - isStringified(string)
+
+```javascript
+_.json.isStringified("bonjour")
+=> true
+var stringified = JSON.stringify({some:{nested:"value"}});
+_.json.isStringified(stringified)
+=> true
+```
