@@ -13,7 +13,6 @@ _.json.get(json, "some.nested")
 ```javascript
 var json = {some:{nested:"value"}}
 _.json.set(json, "some.nested", "thing")
-json
 => {some:{nested:"thing"}}
 ```
 
@@ -22,7 +21,6 @@ json
 ```javascript
 var json = {some:{nested:"value"}}
 _.json.remove(json, "some.nested")
-json
 => {some:null}
 ```
 
@@ -31,7 +29,6 @@ json
 ```javascript
 var json = {some:{array:[1,2,3]}}
 _.json.push(json, "some.array", "hello")
-json
 => {some:{array:[1,2,3,"hello"]}}
 ```
 
@@ -40,7 +37,6 @@ json
 ```javascript
 var json = {some:{array:[1,2,3]}}
 _.json.unshift(json, "some.array", "hello")
-json
 => {some:{array:["hello",1,2,3]}}
 ```
 
@@ -79,7 +75,7 @@ _.json.isStringified("bonjour")
 => true
 
 var json = {some:{nested:"value"}}
-var stringified = JSON.stringify(json);
+var stringified = JSON.stringify(json)
 _.json.isStringified(stringified)
 => true
 ```
