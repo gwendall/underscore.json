@@ -71,6 +71,10 @@
 	
 	_json.is = function(json) {
 		
+		return (json.constructor.name == "Object") ? true : false;
+
+		// Or not?
+
 		try {
 	        JSON.stringify(json);
 	        return true;
