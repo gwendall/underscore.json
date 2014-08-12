@@ -2,7 +2,7 @@ JSON manipulation methods for Underscore.js
 
 **get** - get(json, selector)
 
-<sub>Gets a value in a json</sub>
+Gets a value in a json
 
 ```javascript
 var json = {some:{nested:"value"}}
@@ -12,6 +12,8 @@ _.json.get(json, "some.nested")
 
 **set** - set(json, selector, value)
 
+Sets a value in a json
+
 ```javascript
 var json = {some:{nested:"value"}}
 _.json.set(json, "some.nested", "thing")
@@ -19,6 +21,8 @@ _.json.set(json, "some.nested", "thing")
 ```
 
 **remove** - remove(json, selector)
+
+Remove a value in a json
 
 ```javascript
 var json = {some:{nested:"value"}}
@@ -28,6 +32,8 @@ _.json.remove(json, "some.nested")
 
 **push** - push(json, selector, value)
 
+Inserts a value at the end of an array in a json
+
 ```javascript
 var json = {some:{array:[1,2,3]}}
 _.json.push(json, "some.array", "hello")
@@ -35,6 +41,8 @@ _.json.push(json, "some.array", "hello")
 ```
 
 **unshift** - unshift(json, selector, value)
+
+Inserts a value at the beginning of an array in a json
 
 ```javascript
 var json = {some:{array:[1,2,3]}}
@@ -44,6 +52,8 @@ _.json.unshift(json, "some.array", "hello")
 
 **flatten** - flatten(json)
 
+Flatten the nested keys in a json
+
 ```javascript
 var json = {some:{nested:"value"}}
 _.json.flatten(json)
@@ -52,6 +62,8 @@ _.json.flatten(json)
 
 **unflatten** - unflatten(data)
 
+Builds a json from a dictionnary of dot-separated keys / values
+
 ```javascript
 var json = {some.nested:"value"}
 _.json.unflatten(json)
@@ -59,6 +71,8 @@ _.json.unflatten(json)
 ```
 
 **is** - is(data)
+
+Check if a variable is a valid json
 
 ```javascript
 _.json.is("bonjour")
@@ -71,6 +85,8 @@ _.json.is(json)
 ```
 
 **isStringified** - isStringified(string)
+
+Check if a string is a stringified json
 
 ```javascript
 _.json.isStringified("bonjour")
