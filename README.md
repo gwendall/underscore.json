@@ -80,7 +80,7 @@ _.json.unflatten(json)
 
 **is** - is(data)
 
-Checks if a variable is a valid json
+Checks if a variable is a valid json [need to work on that one]
 
 ```javascript
 _.json.is("bonjour")
@@ -89,7 +89,6 @@ _.json.is("bonjour")
 var json = {some:{nested:"value"}}
 _.json.is(json)
 => true
-
 ```
 
 
@@ -99,7 +98,7 @@ Checks if a string is a stringified json
 
 ```javascript
 _.json.isStringified("bonjour")
-=> true
+=> false
 
 var json = {some:{nested:"value"}}
 var stringified = JSON.stringify(json)
