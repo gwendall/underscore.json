@@ -105,3 +105,17 @@ var stringified = JSON.stringify(json)
 _.json.isStringified(stringified)
 => true
 ```
+
+**prettyprint** - prettyprint(json)
+
+Returns a stringified / prettyprinted variable from the JSON
+
+```javascript
+var json = {some:{nested:"value"}}
+_.json.prettyprint(json)
+=> "{
+    "some": {
+      "nested": "value"
+    }
+  }"
+```
