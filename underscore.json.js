@@ -71,17 +71,8 @@
 	
 	_json.is = function(json) {
 		
-		return (json.constructor.name == "Object") ? true : false;
+		return (toString.call(json) == "[object Object]");
 
-		// Or not?
-
-		try {
-	        JSON.stringify(json);
-	        return true;
-	    } catch (e) {
-	        return false;
-	    }
-		
 	}
 	
 	_json.isStringified = function(string) {
@@ -175,7 +166,7 @@
 		return result;
 		
 	}
-	
+
 	_json.unflatten = function(data) {
 		
 		if (Object(data) !== data || Array.isArray(data))
@@ -194,6 +185,12 @@
 		}
 		return result[""];
 		
+	}
+	
+	_json.prettyprint = function(json) {
+
+		return JSON.stringify(json, undefined, 2);
+
 	}
 	
 	// Integrate with Underscore.js if defined
