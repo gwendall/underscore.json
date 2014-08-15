@@ -115,8 +115,6 @@
 		if (!_.isString(selector)) return _json.exit("remove", "noString", "selector", selector);
 		return deepJSON(json, selector, null, true);
 		
-		console.log("Removing with selector.", json, selector);
-		
 	}
 
 	_json.push = function(json, selector, value, force) {
