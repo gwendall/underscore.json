@@ -197,5 +197,6 @@
 	// or create our own underscore object.
 	root._ = root._ || {};
 	root._.json = _json;
+	root._json = _json;
 
 }(this, String);
