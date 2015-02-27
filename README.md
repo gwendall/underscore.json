@@ -63,7 +63,7 @@ Flatten the nested keys in a json
 ```javascript
 var json = {some:{nested:"value"}}
 _.json.flatten(json)
-=> {some.nested:"value"}
+=> {"some.nested":"value"}
 ```
 
 
